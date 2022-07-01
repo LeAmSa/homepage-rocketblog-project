@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --purple-bg: #290742;
+    --dark-bg: #170027;
+    --button-bg: #9e6dc2;
+    --white: #fff;
+    --light-purple: #fbf6ff;
+    --green: #4fff4b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
