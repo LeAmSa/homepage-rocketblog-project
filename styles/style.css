@@ -34,9 +34,14 @@ a, ul, li {
     text-decoration: none;
 }
 
+nav a {
+    color: rgb(185, 184, 184)
+}
+
 nav {
     height: 15vh;
-    padding: 0 80px;
+    max-width: 1200px;
+    padding: 0 100px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -44,9 +49,46 @@ nav {
     background-color: var(--purple-bg);
 }
 
+ul > a:hover {
+    border-left: 2px solid var(--green);
+    padding-left: 2px;
+    color: white;
+    transition: border-left 0.1s ease-in;
+}
+
 #ct-search {
     display: flex;
     align-items: center;
+}
+
+#input-search {
+    padding: 8px;
+    color: white;
+    background-color: var(--dark-bg);
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+
+
+#ct-search > button {
+    display: flex;
+    background-color: var(--button-bg);
+    border: none;
+    height: 31px;
+    width: 45px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 5px 5px 0;
+    
+}
+
+#ct-search > button:hover {
+    cursor: pointer;
+}
+
+#ct-search > button > img {
+    width: 15px;
 }
 
 ul {
@@ -72,36 +114,57 @@ article > img {
     gap: 5px;
 }
 
-.grid-container {
-    display: grid;
-    margin: 0 auto;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px 15px;
+#see-more-link p {
+    color: var(--button-bg);
 }
 
-.purple-grid {
+.featured-grid {
     display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
     grid-template-columns: repeat(2, 1fr);
     grid-column: span 3;
+    gap: 100px;
     border-bottom: 3px solid var(--green);
     background-color: var(--purple-bg);
+    padding: 30px 100px 60px 100px;
 }
 
-.purple-article-text {
+.featured-article-text {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: space-between;
+}
+
+.featured-article-text h1 {
+    font-size: 2em;
+    color: var(--button-bg);
+}
+
+.featured-article-text p {
+    color: white;
 }
 
 .container-2 {
     display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 60px 100px 0 100px;
+    background-color: var(--light-purple);
+}
+
+.container-2-ln-1 {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column: span 3;
-    gap: 40px;
+    gap: 100px;
+    margin-bottom: 30px;
 }
 
 .no-image-article:first-child {
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     border-bottom: 1px solid lightgray;
 }
 
