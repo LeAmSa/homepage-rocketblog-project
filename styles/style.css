@@ -49,8 +49,6 @@ nav {
     background-color: var(--purple-bg);
 }
 
-
-
 .menu-btn {
     display: flex;
     justify-content: center;
@@ -115,6 +113,10 @@ ul > a:hover {
     transition: border-left 0.1s ease-in;
 }
 
+#mobile-search-container {
+    display: none;
+}
+
 #ct-search {
     display: flex;
     align-items: center;
@@ -128,8 +130,6 @@ ul > a:hover {
     border-radius: 5px 0 0 5px;
 }
 
-
-
 #ct-search > button {
     display: flex;
     background-color: var(--button-bg);
@@ -139,7 +139,6 @@ ul > a:hover {
     align-items: center;
     justify-content: center;
     border-radius: 0 5px 5px 0;
-    
 }
 
 #ct-search > button:hover {
@@ -155,7 +154,6 @@ ul {
     align-items: center;
     justify-content: center;
     gap: 40px;
-
 }
 
 body article {
@@ -234,4 +232,94 @@ article > img {
  article > p, article > h3 {
     margin: 5px;
  }
+
+@media (max-width: 1000px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    ul {
+        position: absolute;
+        background-color: var(--dark-bg);
+        top: 15vh;
+        right: 0;
+        width: 50vw;
+        height: 85vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all .3s ease-in-out;
+    }
+
+    ul li {
+        opacity: 0;
+        padding: 10px 0 5px 10px;
+        
+    }
+
+    #mobile-search-container {
+        display: block;
+    }
+
+    #ct-search-mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    #input-search-mobile {
+        padding: 8px;
+        color: white;
+        background-color: var(--dark-bg);
+        border: none;
+        border-radius: 5px 0 0 5px;
+    }
+    
+    #ct-search-mobile > button {
+        display: flex;
+        background-color: var(--button-bg);
+        border: none;
+        height: 31px;
+        width: 45px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 5px 5px 0;
+    }
+    
+    #ct-search-mobile > button:hover {
+        cursor: pointer;
+    }
+    
+    #ct-search-mobile > button > img {
+        width: 15px;
+    }
+
+    #ct-search {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    /*Classe setada via JS para aparecer o menu*/
+    ul.active {
+        transform: translateX(0);
+        opacity: 1;
+        transition: all .3s ease-in-out;
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
