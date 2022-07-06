@@ -349,8 +349,17 @@ article > img {
         width: 95vw;
     }
 
+    nav {
+        padding: 0 40px;
+    }
+
+    .featured-grid {
+        padding: 30px 40px 60px 40px;
+    }
+
     .container-2 {
         row-gap: 0;
+        padding: 60px 40px 0 40px;
     }
 
     .container-2-ln-1 {
@@ -381,6 +390,20 @@ article > img {
     }
 
 
+}
+
+@media (max-width: 650px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    .featured-grid {
+        padding: 30px 20px 60px 20px;
+    }
+
+    .container-2 {
+        padding: 60px 20px 0 20px;
+    }
 }
 
 @keyframes navLinkFade {
