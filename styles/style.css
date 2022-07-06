@@ -29,13 +29,29 @@ p, li {
     font-family: 'Roboto', sans-serif;
 }
 
-a, ul, li {
+ul, li {
     list-style: none;
     text-decoration: none;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000;
+}
+
+.image-link img {
+    width: 100%;
+}
+
 nav a {
-    color: rgb(185, 184, 184)
+    color: rgb(185, 184, 184);
+}
+
+nav a:visited {
+    color: rgb(185, 184, 184);
 }
 
 nav {
