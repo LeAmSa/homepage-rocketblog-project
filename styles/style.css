@@ -38,20 +38,16 @@ a {
     text-decoration: none;
 }
 
-a:visited {
-    color: #000;
-}
-
 .image-link img {
     width: 100%;
 }
 
-nav a {
+nav a, nav a:visited {
     color: rgb(185, 184, 184);
 }
 
-nav a:visited {
-    color: rgb(185, 184, 184);
+a, a:visited {
+    color: #000;
 }
 
 nav {
