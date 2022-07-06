@@ -63,7 +63,7 @@ nav {
 .menu-btn_burguer {
     height: 3px;
     width: 30px;
-    background: #fff;
+    background: var(--green);
     border-radius: 5px;
     transition: all .5s ease-in-out;
 }
@@ -240,23 +240,29 @@ article > img {
 
     ul {
         position: absolute;
-        background-color: var(--dark-bg);
+        background-image: linear-gradient(to bottom, var(--purple-bg) 2%, var(--dark-bg) 98%);
         top: 15vh;
         right: 0;
         width: 50vw;
         height: 85vh;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: center;
         gap: 0;
         opacity: 0;
         transform: translateX(100%);
         transition: all .3s ease-in-out;
     }
 
+    ul a {
+        width: 100%;
+    }
+
     ul li {
         opacity: 0;
-        padding: 10px 0 5px 10px;
+        width: 100%;
+        padding: 20px 0 20px 20px;
+        border-bottom: 1px solid rgba(211, 211, 211, 0.171);
         
     }
 
@@ -271,8 +277,8 @@ article > img {
 
     #input-search-mobile {
         padding: 8px;
-        color: white;
-        background-color: var(--dark-bg);
+        color: black;
+        background-color: var(--light-purple);
         border: none;
         border-radius: 5px 0 0 5px;
     }
@@ -310,6 +316,55 @@ article > img {
         opacity: 1;
         transition: all .3s ease-in-out;
     }
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .featured-article-text {
+        gap: 15px;
+        grid-row: 2 / 3;
+    }
+}
+
+@media (max-width: 800px) {
+    ul {
+        width: 95vw;
+    }
+
+    .container-2 {
+        row-gap: 0;
+    }
+
+    .container-2-ln-1 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        row-gap: 0;
+    }
+
+    .container-2-ln-1 > article {
+        padding-bottom: 30px;
+        border-bottom: 1px solid lightgray;
+    }
+
+    .no-image-article:last-child {
+        padding: 0 0 30px 0;
+    }
+
+    .no-image-article {
+        border-bottom: 1px solid lightgray;
+        padding: 30px 0;
+        margin: 0;
+    }
+
+    .bottom-articles {
+        grid-column: span 3;
+        padding: 30px 0;
+        border-bottom: 1px solid lightgray;
+    }
+
+
 }
 
 @keyframes navLinkFade {
