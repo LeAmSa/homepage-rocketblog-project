@@ -245,6 +245,11 @@ article > img {
     margin: 5px;
  }
 
+ article img:hover {
+    opacity: .9;
+    transition: all .3s ease-in-out;
+ }
+
 @media (max-width: 1000px) {
     body {
         overflow-x: hidden;
