@@ -51,7 +51,7 @@ a, a:visited {
 }
 
 nav {
-    height: 15vh;
+    height: 100px;
     max-width: 1200px;
     padding: 0 100px;
     margin: 0 auto;
@@ -139,6 +139,7 @@ ul > a:hover {
     color: white;
     background-color: var(--dark-bg);
     border: none;
+    outline: none;
     border-radius: 5px 0 0 5px;
 }
 
@@ -220,7 +221,7 @@ article > img {
     margin: 0 auto;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 60px 100px 0 100px;
+    padding: 60px 100px 45px 100px;
     background-color: var(--light-purple);
 }
 
@@ -251,17 +252,24 @@ article > img {
  }
 
 @media (max-width: 1000px) {
-    body {
+    body, html {
         overflow-x: hidden;
+    }
+
+    nav {
+        position: fixed;
+        width: 100%;
+        height: 80px;
+        z-index: 1000;
     }
 
     ul {
         position: absolute;
         background-image: linear-gradient(to bottom, var(--purple-bg) 2%, var(--dark-bg) 98%);
-        top: 15vh;
+        top: 80px;
         right: 0;
         width: 50vw;
-        height: 85vh;
+        height: 100vh;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
@@ -297,6 +305,7 @@ article > img {
         color: black;
         background-color: var(--light-purple);
         border: none;
+        outline: none;
         border-radius: 5px 0 0 5px;
     }
     
@@ -335,6 +344,7 @@ article > img {
     }
 
     .featured-grid {
+        padding-top: 90px;
         grid-template-columns: 1fr;
         gap: 15px;
     }
@@ -355,7 +365,7 @@ article > img {
     }
 
     .featured-grid {
-        padding: 30px 40px 60px 40px;
+        padding: 90px 40px 60px 40px;
     }
 
     .container-2 {
@@ -399,7 +409,7 @@ article > img {
     }
 
     .featured-grid {
-        padding: 30px 20px 60px 20px;
+        padding: 90px 20px 60px 20px;
     }
 
     .container-2 {
